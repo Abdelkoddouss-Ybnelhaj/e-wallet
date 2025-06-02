@@ -1,5 +1,5 @@
 # stage-1 : build environment avec mauvaises pratiques
-FROM maven:3.8.1-openjdk-17-slim AS builder 
+FROM maven:3.8.1-openjdk-17-slim AS builder  
 
 # ❌ Utilisation de comptes utilisateurs par défaut (root implicite)
 WORKDIR /app
