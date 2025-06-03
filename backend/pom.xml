@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.github.yildizmy</groupId>
 	<artifactId>e-wallet</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>e-wallet</name>
 	<description>Spring Boot app used for digital wallet transactions</description>
 	<properties>
@@ -93,7 +93,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	
 	<build>
 		<plugins>
 			<plugin>
