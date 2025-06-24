@@ -1,13 +1,17 @@
 package com.github.yildizmy.service;
 
 import com.github.tomakehurst.wiremock.client.WireMock;
+import com.github.yildizmy.db.AbstractIntegrationTest;
 import com.github.yildizmy.dto.mapper.WeatherInfo;
+import net.bytebuddy.utility.dispatcher.JavaDispatcher;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.test.context.TestPropertySource;
+import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.junit.jupiter.Container;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -18,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @TestPropertySource(properties = {
         "app.weather.api.base-url=http://localhost:9561/data/2.5/weather"
 })
-public class WeatherServiceIT {
+public class WeatherServiceIT extends AbstractIntegrationTest {
 
     @Autowired
     private WeatherService weatherService;
